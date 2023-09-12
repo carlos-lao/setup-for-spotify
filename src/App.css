@@ -1,38 +1,132 @@
-.App {
+@media (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  color: #FFFFFF;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  background-color: #191414dd;
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title-wrapper {
+  margin-bottom: 1.2rem;
+}
+
+.title {
+  font-family: 'Anton', sans-serif;
+  font-size: 6.5rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.title-em {
+  color: #1DB954;
+  font-size: 7.5rem;
+  letter-spacing: 2px;
+  margin-left: 2px;
+  
+}
+
+.subtitle {
+  text-align: right;
+  margin: 0;
+  font-size: 1rem;
+  transform: translateY(-1.8rem);
+}
+
+.spotify-logo {
+  margin-left: 1px;
+  height: 1rem;
+  transform: translateY(0.1rem);
+}
+
+.search-input-wrapper {
+  margin-bottom: 8vw;
+}
+
+.search-input {
+  color: #ffffff;
+  min-width: 32vw;
+  font-size: 1.8rem;
+  font-weight: 300;
+  padding: 0 8px;
+  padding-bottom: 5px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid #ffffff;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+::placeholder{
+  color: #ffffff99;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-input:focus {
+  outline: none;
+  border-bottom-color: #1DB954;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.search-input-description {
+  margin-top: 0.5rem;
+  text-align: center;
+  animation: 2s pulse infinite;
+  animation-direction: alternate;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes pulse {
+  0% { color: #ffffff88; }
+  100% { color: #ffffff11; }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-button {
+  font-weight: 800;
+  font-size: 40px;
+  padding: 15px;
+  min-width: 32vw;
+  color: #191414;
+  background-color: #1DB954;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 27px;
+}
+
+.search-button:hover {
+  cursor: pointer;
+  background-color: #20d05e;
 }
