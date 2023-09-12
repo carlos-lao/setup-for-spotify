@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/setup-for-spotify/static/css/main.618c160b.css",
+    "main.js": "/setup-for-spotify/static/js/main.d552326e.js",
+    "static/media/background.jpeg": "/setup-for-spotify/static/media/background.c2586c7b2ce52f9f199b.jpeg",
+    "static/media/spotify-logo-white.png": "/setup-for-spotify/static/media/spotify-logo-white.f48fb565509bf23854a8.png",
+    "index.html": "/setup-for-spotify/index.html",
+    "main.618c160b.css.map": "/setup-for-spotify/static/css/main.618c160b.css.map",
+    "main.d552326e.js.map": "/setup-for-spotify/static/js/main.d552326e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.618c160b.css",
+    "static/js/main.d552326e.js"
+  ]
+}
