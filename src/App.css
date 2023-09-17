@@ -398,7 +398,7 @@ button:hover {
   font-size: 2rem;
   font-weight: 700;
   opacity: 0.05;
-  transform: 100ms ease-in-out;
+  transition: 100ms ease-in-out;
 }
 
 .set-display:hover > .expand {
