@@ -1,26 +1,95 @@
+/* responsive */
+@media (min-width: 0px) {
+  html {
+    font-size: 12px;
+  }
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    border: 1px solid #0000;
+  }
+  .container {
+    padding: 0 5vw;
+  }
+  .search-input {
+    min-width: 70vw;
+  }
+  .venue-name {
+    display: block;
+  }
+}
+
 @media (min-width: 768px) {
   html {
     font-size: 20px;
   }
-}
-
-@media (max-width: 767px) {
-  html {
-    font-size: 12px;
+  ::-webkit-scrollbar {
+    width: 12px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    border: 3px solid #0000;
+  }
+  .container {
+    padding: 0 15vw;
+  }
+  .search-input {
+    min-width: 40vw;
+  }
+  .venue-name {
+    display: inline;
+    margin-left: 0.5em;
   }
 }
 
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 18vw;
+  }
+  .search-input {
+    min-width: 30vw;
+  }
+}
+
+/* global */
 body {
   margin: 0;
   font-family: 'Lato', sans-serif;
   color: #FFFFFF;
+  overflow: overlay;
+}
+
+input {
+  font-family: 'Lato', sans-serif;
+}
+
+button {
+  font-family: 'Lato', sans-serif;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #494444;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-track {
+  background: #19141433;
+  width: 10px;
 }
 
 .wrapper {
   height: 100vh;
   width: 100vw;
   box-sizing: border-box;
-  background-color: #191414dd;
+  overflow-x: hidden;
 }
 
 .background {
@@ -28,16 +97,94 @@ body {
   width: 100vw;
   object-fit: cover;
   position: fixed;
-  z-index: -1;
+  z-index: -2;
 }
 
-.content {
-  height: 100%;
-  width: 100%;
+.background-overlay {
+  position: fixed;
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  background-color: #191414dd;
 }
 
 .container {
-  min-height: 100%;
+  min-height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+.test {
+  color: white;
+  background-color: blue;
+  height: 100px;
+  width: 100px;
+}
+
+.navbar {
+  padding: 1rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-title {
+  font-family: 'Anton', sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.logo-subtitle {
+  text-align: right;
+  margin: 0;
+  font-size: 0.5rem;
+  transform: translateY(-0.6rem);
+}
+
+.logo-spotify-logo {
+  margin-left: 1px;
+  height: 0.5rem;
+  transform: translateY(0.1rem);
+}
+
+.light-btn {
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  font-weight: 300;
+  padding: 0.36rem 0.9rem;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: 0.25s ease-in-out;
+}
+
+.light-btn:hover {
+  background-color: #FFFFFF;
+  color:#191414
+}
+
+.back-btn {
+  padding-left: 0;
+  padding-right: 0;
+  border: none;
+}
+
+.back-btn:hover {
+  background-color: transparent;
+  color: #1DB954;
+}
+
+.back-icon {
+  margin-right: 0.3rem
+}
+
+/* page one */
+.page-one {
+  margin-top: 10vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,7 +204,7 @@ body {
 
 .title-em {
   color: #1DB954;
-  font-size: 7.5rem;
+  font-size: 1.15em;
   letter-spacing: 2px;
   margin-left: 2px;
   
@@ -77,32 +224,42 @@ body {
 }
 
 .search-input-wrapper {
-  margin-bottom: 8vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .search-input {
   color: #ffffff;
-  min-width: 32vw;
   font-size: 1.8rem;
   font-weight: 300;
-  padding: 0 8px;
+  padding: 0;
   padding-bottom: 5px;
   background-color: transparent;
   border: none;
   border-bottom: 3px solid #ffffff;
   text-align: center;
+  transition: ease-in-out 0.25s;
 }
 
-::placeholder{
+.search-input::placeholder{
   color: #ffffff99;
 }
 
 .search-input:focus {
   outline: none;
+  padding-left: min(5vw, 50px);
+  padding-right: min(5vw, 50px);
   border-bottom-color: #1DB954;
 }
 
+.search-input:focus::placeholder {
+  color: transparent;
+}
+
 .search-input-description {
+  margin: 0;
   margin-top: 0.5rem;
   text-align: center;
   animation: 2s pulse infinite;
@@ -112,6 +269,11 @@ body {
 @keyframes pulse {
   0% { color: #ffffff88; }
   100% { color: #ffffff11; }
+}
+
+.spinner {
+  width: 4rem;
+  height: 4rem;
 }
 
 .search-button {
@@ -127,6 +289,118 @@ body {
 }
 
 .search-button:hover {
-  cursor: pointer;
   background-color: #20d05e;
+}
+
+/* page two */
+.page-two {
+  margin: 2vh 0;
+}
+
+.results-prompt {
+  font-weight: 300;
+  text-align: center;
+}
+
+.ellipses {
+  letter-spacing: 0.1rem;
+}
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 100%;
+  align-items: stretch;
+}
+
+.set-display {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 100ms ease-in;
+}
+
+.set-display:hover {
+  transform: translateX(1vw);
+  cursor: pointer;
+}
+
+.set-info {
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.date-wrapper {
+  position: relative;
+  box-shadow: 5px 5px 10px #111;
+  align-self: stretch;
+  width: 5rem;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.date-month {
+  font-size: 1rem;
+  padding: 0.15rem 0;
+  font-weight: 700;
+  background-color: #1DB954;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.date-day {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background-color: #FFFFFF;
+  color: #191414;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  padding-bottom: 0.6rem;
+}
+
+.date-year {
+  margin: 0;
+  position: absolute;
+  font-size: 0.65rem;
+  color: #191414;
+  bottom: 0.1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.tour-name {
+  margin: 0;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.venue-name {
+  font-weight: 300;
+  font-size: 0.6em;
+  color:#FFFFFF88;
+}
+
+.artist-name {
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.expand {
+  font-size: 2rem;
+  font-weight: 700;
+  opacity: 0.05;
+  transform: 100ms ease-in-out;
+}
+
+.set-display:hover > .expand {
+  opacity: 1;
 }
