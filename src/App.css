@@ -181,7 +181,29 @@ button:hover {
   margin-right: 0.3rem
 }
 
-/* page one */
+.spinner-small {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.profile-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.user-photo {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+}
+
+.user-name {
+  margin-right: 0.3rem;
+  font-weight: 100;
+}
+
+/* MARK: page one */
 .page-one {
   margin-top: 10vh;
   width: 100%;
@@ -276,30 +298,20 @@ button:hover {
   height: 4rem;
 }
 
-.search-button {
-  font-weight: 800;
-  font-size: 40px;
-  padding: 15px;
-  min-width: 32vw;
-  color: #191414;
-  background-color: #1DB954;
-  border: none;
-  box-sizing: border-box;
-  border-radius: 27px;
-}
-
-.search-button:hover {
-  background-color: #20d05e;
-}
-
-/* page two */
+/* MARK: page two */
 .page-two {
   margin: 2vh 0;
+  min-height: 100%;
 }
 
 .results-prompt {
   font-weight: 300;
   text-align: center;
+}
+
+.results-end {
+  margin: 0;
+  margin-bottom: 3rem;
 }
 
 .ellipses {
@@ -403,4 +415,172 @@ button:hover {
 
 .set-display:hover > .expand {
   opacity: 1;
+}
+
+.empty-results-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* MARK: page 3 */
+.page-three {
+  position: relative;
+}
+
+.songs-wrapper {
+  background-color: #FEFEFEDD;
+  color: #191414;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px #222;
+}
+
+.tour-header {
+  padding: 0 1.2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.3rem;
+  background-color: #1DB954;
+  position: relative;
+  color: #FFFFFF;
+}
+
+.tour-content {
+  padding: 0.8rem 1.2rem;
+  padding-bottom: 0;
+}
+
+.tour-title {
+  display: inline-block;
+  z-index: 100;
+  font-size: 2rem;
+  letter-spacing: 0.05rem;
+  font-family: 'Anton', sans-serif;
+  margin: 0;
+}
+
+.tour-venue {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+.artist-subtitle {
+  margin: 0;
+  font-family: 'Anton', sans-serif;
+  font-size: 1rem;
+  opacity: 0.6;
+  margin-top: -0.5rem;
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.05rem;
+}
+
+.set-part {
+  margin-bottom: 1.2rem;
+}
+
+.set-order {
+  position: relative;
+  font-size: 1.2rem;
+  margin: 0;
+  margin-bottom: 0.5rem;
+}
+
+.set-title {
+  font-style: italic;
+}
+
+.song-list {
+  list-style-position: inside;
+  padding: 0;
+  white-space: nowrap;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 0;
+  display: block;
+}
+
+.song-wrapper {
+  padding: 0.5rem;
+  margin-bottom: 0.2rem;
+  margin-left: -0.5rem;
+}
+
+.song-wrapper:hover {
+  background-color: #A8A8A840;
+  border-radius: 10px;
+}
+
+.song-name {
+  padding-left: 0.2rem;
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+  white-space: normal;
+  cursor: default;
+}
+
+.song-info {
+  font-weight: 300;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.song-info.has-name {
+  font-size: 0.8em;
+}
+
+.generate-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  box-sizing: border-box;
+  border-radius: 5px;
+  transition: 250ms ease-in-out;
+  margin-left: 0.75rem;
+  background-color: #45E17C;
+  /* background-color: #19141440; */
+  color: #1DB954;
+}
+
+.generate-btn.disabled {
+  color: #191414;
+  background-color: #696464;
+  opacity: 0.25;
+}
+
+.generate-btn:not(.disabled):hover {
+  background-color: #6DFFA4;
+}
+
+.generate-btn:not(.disabled):hover > i {
+  animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-0.1rem);}
+	60% {transform: translateY(-0.2rem);}
+}
+
+.generate-btn.disabled:hover {
+  cursor: default;
+}
+
+.login-warning {
+  position: absolute;
+  top: -1.8rem;
+  left: 0;
+  width: 100%;
+  height: fit-content;
+  cursor: default;
+  text-align: center;
+  font-weight: 300;
+  font-size: 0.75rem;
+  color: #FF5555;
 }

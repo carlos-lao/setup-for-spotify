@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SetDisplay = ({artist, tour, venue, date, sets}) => {
+const SetDisplay = ({artist, tour, venue, date, sets, onClick}) => {
   const formatVenueName = (name) => {
     if (name.indexOf(' at ') !== -1) {
       return name.slice(0, venue.name.indexOf(' at'));
@@ -9,7 +9,13 @@ const SetDisplay = ({artist, tour, venue, date, sets}) => {
   }
   
   return (
-    <div className='set-display' onClick={() => {console.log(sets, venue)}}>
+    <div className='set-display' onClick={() => { onClick({
+      set: sets.set,
+      artist: artist.name,
+      tour: tour?.name || 'Concert',
+      venue: formatVenueName(venue.name),
+      date
+    })}}>
       <div className='set-info'>
         <div className='date-wrapper'>
             <div className='date-month'>{date.month}</div>
