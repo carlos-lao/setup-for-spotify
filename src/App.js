@@ -22,13 +22,13 @@ const App = () => {
     const { href } = window.location;
     if (href.indexOf('#access_token') !== -1) {
       const token = href.slice(href.indexOf('=') + 1);
-      axios.get(`${API.SPOTIFY_DEV}/auth`, { params: {token} })
+      axios.get(`${API.SPOTIFY_PROD}/auth`, { params: {token} })
         .then((res) => {
           const { display_name, images } = res.data.body;
           setUser({name: display_name, photo: images[0].url });
         })
         .catch(() => {
-          window.location.replace(ROOT.DEV);
+          window.location.replace(ROOT.PROD);
         })
     } else {
       setUser(null);
@@ -77,7 +77,7 @@ const App = () => {
         <button 
           className='light-btn'
           onClick={() => {
-            axios.get(`${API.SPOTIFY_DEV}/login`).then((res) => {
+            axios.get(`${API.SPOTIFY_PROD}/login`).then((res) => {
               window.open(res.data, '_self');
             })
           }}
@@ -220,7 +220,7 @@ const App = () => {
                   onKeyDown = { (e) => {
                     if (e.key === 'Enter' && search.trim().length) {
                       setShowSpinner(true);
-                      axios.get(`${API.SETLISTFM_DEV}/search`, { params: {q: search} })
+                      axios.get(`${API.SETLISTFM_PROD}/search`, { params: {q: search} })
                         .then((res) => {
                           if (res.data?.setlist) {
                             setResults(res.data.setlist);
