@@ -230,18 +230,16 @@ const App = () => {
       return (
         <div className="complete-wrapper">
           <h2 className="complete-message">{completionInfo.message}</h2>
-          <div className="complete-failures">
-            <h4 className="failure-title">Failed to add the following songs:</h4>
-            {completionInfo.failures.length > 0 &&
-              (
-                <ol className="failure-list">
-                  {completionInfo.failures.map((elem, idx) => (
-                    <li key={idx}>{elem}</li>
-                  ))}
-                </ol>
-              )
-            }
-          </div>
+          {completionInfo.failures.length > 0 && (
+            <div className="complete-failures">
+              <h4 className="failure-title">Failed to add the following songs:</h4>
+                  <ol className="failure-list">
+                    {completionInfo.failures.map((elem, idx) => (
+                      <li key={idx}>{elem}</li>
+                    ))}
+                  </ol>
+            </div>
+          )}
           <h2 className="complete-disclaimer">Click the button below to check out your new playlist.<br />Make sure to double check that it has the right songs.<br />Even computers mess up sometimes! 🥲</h2>
           <button
             className="complete-main-btn"
