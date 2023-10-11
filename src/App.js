@@ -86,8 +86,8 @@ const App = () => {
       API
         .post('setupAPI', '/playlist', { body })
           .then((res) => {
-            const data = JSON.parse(res.body);
             if (res.success) {
+              const data = JSON.parse(res.body);
               setCompletionInfo({
                 success: true, 
                 ...data
@@ -216,9 +216,11 @@ const App = () => {
         <div className="complete-wrapper">
           <h2 className="complete-message">{completionInfo.message}</h2>
           <button
+            className="complete-main-btn"
             onClick={prevPage}
           >Review Set List</button>
           <button
+            className="complete-home-btn"
             onClick={() => {setPage({...page, next: 1})}}
           >Back to Search</button>
         </div>
