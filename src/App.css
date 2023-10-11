@@ -584,3 +584,78 @@ button:hover {
   font-size: 0.75rem;
   color: #FF5555;
 }
+
+/* MARK: page four */
+.page-four {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.complete-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.complete-message {
+  text-align: center;
+  margin: 0;
+}
+
+.complete-failures {
+  color: #ff6c6c;
+  display: inline-block;
+  font-size: 1em;
+  margin: 1.2em 0;
+}
+
+.failure-title {
+  margin: 0;
+  margin-bottom: 0.3em;
+}
+
+.failure-list {
+  margin: 0;
+  list-style-position: inside;
+  padding: 0;
+}
+
+.complete-disclaimer {
+  text-align: center;
+  font-weight: 100;
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.complete-main-btn {
+  background-color: #1DB954;
+  color: #FFFFFF;
+  width: 80%;
+  font-size: 1.3em;
+  padding: 0.45em 15vw;
+  border-radius: 1.2em;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.complete-main-btn:hover {
+  background-color: #2DC964;
+}
+
+.complete-home-btn {
+  background-color: transparent;
+  color: #FFFFFF;
+  opacity: 0.6;
+  font-size: 0.9em;
+  transition: ease-in-out 250ms;
+}
+
+.complete-home-btn:hover {
+  opacity: 1;
+}

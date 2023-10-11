@@ -1,0 +1,130 @@
+{
+  "api": {
+    "setupAPI": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "setupAPISearch"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "setupAPILogin"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "setupAPIAuth"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "setupAPIPlaylist"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "setupAPIAuth": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "setupAPILogin": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "setupAPIPlaylist": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "setupAPISearch": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_setupAPIAuth_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "setupAPIAuth"
+        }
+      ]
+    },
+    "AMPLIFY_function_setupAPIAuth_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "setupAPIAuth"
+        }
+      ]
+    },
+    "AMPLIFY_function_setupAPILogin_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "setupAPILogin"
+        }
+      ]
+    },
+    "AMPLIFY_function_setupAPILogin_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "setupAPILogin"
+        }
+      ]
+    },
+    "AMPLIFY_function_setupAPIPlaylist_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "setupAPIPlaylist"
+        }
+      ]
+    },
+    "AMPLIFY_function_setupAPIPlaylist_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "setupAPIPlaylist"
+        }
+      ]
+    },
+    "AMPLIFY_function_setupAPISearch_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "setupAPISearch"
+        }
+      ]
+    },
+    "AMPLIFY_function_setupAPISearch_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "setupAPISearch"
+        }
+      ]
+    }
+  }
+}

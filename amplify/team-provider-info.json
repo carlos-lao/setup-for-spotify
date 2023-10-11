@@ -1,0 +1,38 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-setupforspotify-dev-120012-authRole",
+      "UnauthRoleArn": "arn:aws:iam::158072506693:role/amplify-setupforspotify-dev-120012-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::158072506693:role/amplify-setupforspotify-dev-120012-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-setupforspotify-dev-120012-deployment",
+      "UnauthRoleName": "amplify-setupforspotify-dev-120012-unauthRole",
+      "StackName": "amplify-setupforspotify-dev-120012",
+      "StackId": "arn:aws:cloudformation:us-east-1:158072506693:stack/amplify-setupforspotify-dev-120012/40184f20-679f-11ee-b3ae-0ef22b5e199b",
+      "AmplifyAppId": "d39fk2ax3dt3d7"
+    },
+    "categories": {
+      "function": {
+        "setupAPISearch": {
+          "deploymentBucketName": "amplify-setupforspotify-dev-120012-deployment",
+          "s3Key": "amplify-builds/setupAPISearch-795355357475796e6875-build.zip"
+        },
+        "setupAPILogin": {
+          "deploymentBucketName": "amplify-setupforspotify-dev-120012-deployment",
+          "s3Key": "amplify-builds/setupAPILogin-52776d75724e5368585a-build.zip"
+        },
+        "setupAPIAuth": {
+          "deploymentBucketName": "amplify-setupforspotify-dev-120012-deployment",
+          "s3Key": "amplify-builds/setupAPIAuth-6b513377506c78616737-build.zip"
+        },
+        "setupAPIPlaylist": {
+          "deploymentBucketName": "amplify-setupforspotify-dev-120012-deployment",
+          "s3Key": "amplify-builds/setupAPIPlaylist-435672494e2f6b774254-build.zip"
+        }
+      },
+      "api": {
+        "setupAPI": {}
+      }
+    }
+  }
+}

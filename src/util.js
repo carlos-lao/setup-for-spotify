@@ -30,15 +30,3 @@ export const TRANSITION_STYLE = {
   unmounted: {display: 'none'},
   unmountedpersist: {opacity: 0},
 };
-
-export const ROOT = {
-  PROD: 'https://carlos-lao.github.io/setup-for-spotify/',
-  DEV: 'http://localhost:3000/setup-for-spotify',
-}
-
-export const API = {
-  SETLISTFM_DEV: 'http://localhost:8080',
-  SPOTIFY_DEV: 'http://localhost:8888',
-  SETLISTFM_PROD: 'https://setup-for-spotify.onrender.com:8080/',
-  SPOTIFY_PROD: 'https://setup-for-spotify.onrender.com:8888/',
-}

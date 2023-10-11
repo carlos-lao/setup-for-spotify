@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "paths": {
+    "/search": {
+      "name": "/search",
+      "lambdaFunction": "setupAPISearch",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/login": {
+      "name": "/login",
+      "lambdaFunction": "setupAPILogin",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/auth": {
+      "name": "/auth",
+      "lambdaFunction": "setupAPIAuth",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/playlist": {
+      "name": "/playlist",
+      "lambdaFunction": "setupAPIPlaylist",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
