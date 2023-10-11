@@ -659,3 +659,21 @@ button:hover {
 .complete-home-btn:hover {
   opacity: 1;
 }
+
+.spinner.lg {
+  height: 8em;
+  width: 8em;
+}
+
+.complete-load-text {
+  font-size: 1em;
+  margin: 0;
+  margin-top: 2em;
+  animation: blink 1.2s ease infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+	0% {opacity: 1;} 
+  100% {opacity: 0.3;}
+}

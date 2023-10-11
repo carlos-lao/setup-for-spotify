@@ -206,17 +206,17 @@ const App = () => {
   const renderComplete = () => {
     if (completionInfo === null) {
       return (
-        <div>
-          <img src={spinner} alt='loading icon' className="spinner"/>
-          <p>Generating your playlist...</p>
+        <div className="complete-wrapper">
+          <img src={spinner} alt='loading icon' className="spinner lg"/>
+          <p className="complete-load-text">Generating your playlist...</p>
         </div>
       )
     } else if (!completionInfo.success) {
       return (
-        <div>
+        <div className="complete-wrapper">
           <h2 className="complete-message">{completionInfo.message}</h2>
           <button
-            onClick={() => {window.open(completionInfo.playlistURL, '_blank')}}
+            onClick={prevPage}
           >Review Set List</button>
           <button
             onClick={() => {setPage({...page, next: 1})}}
