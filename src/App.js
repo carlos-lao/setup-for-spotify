@@ -31,6 +31,7 @@ const App = () => {
               setUser({name: display_name, photo: images[0]?.url, token });
             } else {
               alert("Could not verify the provided token. Please try logging in again.");
+              setUser(null);
               window.open(href.slice(0, href.indexOf('#')), '_self');
             }
           })
@@ -69,7 +70,7 @@ const App = () => {
         data: {
           title: selected.tour,
           artist: selected.artist,
-          description: `${selected.artist}'s "${selected.tour}" set list on ${selected.date.month} ${selected.date.day}, ${selected.date.year} @ ${selected.venue}.`,
+          description: `${selected.artist}'s "${selected.tour}" set list from ${selected.date.month} ${selected.date.day}, ${selected.date.year} @ ${selected.venue}.`,
           songs: [],
         }
       }
