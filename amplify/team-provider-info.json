@@ -19,15 +19,15 @@
         },
         "setupAPILogin": {
           "deploymentBucketName": "amplify-setupforspotify-dev-120012-deployment",
-          "s3Key": "amplify-builds/setupAPILogin-52776d75724e5368585a-build.zip"
+          "s3Key": "amplify-builds/setupAPILogin-4b6577724d5456376359-build.zip"
         },
         "setupAPIAuth": {
           "deploymentBucketName": "amplify-setupforspotify-dev-120012-deployment",
-          "s3Key": "amplify-builds/setupAPIAuth-6b513377506c78616737-build.zip"
+          "s3Key": "amplify-builds/setupAPIAuth-494f6d4b5041524d596e-build.zip"
         },
         "setupAPIPlaylist": {
           "deploymentBucketName": "amplify-setupforspotify-dev-120012-deployment",
-          "s3Key": "amplify-builds/setupAPIPlaylist-435672494e2f6b774254-build.zip"
+          "s3Key": "amplify-builds/setupAPIPlaylist-67625746424d5a737a48-build.zip"
         }
       },
       "api": {

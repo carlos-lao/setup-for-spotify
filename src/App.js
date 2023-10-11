@@ -28,7 +28,7 @@ const App = () => {
           .then((res) => {
             if (res.success) {
               const { display_name, images } = JSON.parse(res.body);
-              setUser({name: display_name, photo: images[0].url, token });
+              setUser({name: display_name, photo: images[0]?.url, token });
             } else {
               alert("Could not verify the provided token. Please try logging in again.");
               window.open(href.slice(0, href.indexOf('#')), '_self');
@@ -127,7 +127,7 @@ const App = () => {
       return (
         <div className='profile-wrapper'>
           <p className='user-name'>{user.name}</p>
-          <img src={user.photo} alt='spotify profile' className="user-photo"/>
+          {user.photo && <img src={user.photo} alt='spotify profile' className="user-photo"/>}
         </div>
       );
     }

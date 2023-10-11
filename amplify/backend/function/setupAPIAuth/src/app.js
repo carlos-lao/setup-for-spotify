@@ -28,8 +28,7 @@ app.use(function(req, res, next) {
 const SPOTIFY = {
   CLIENT_ID: '597cb332fd4b460db75d1e2ab15a766a',
   CLIENT_SECRET: 'ffd57fcd50cd437fa70c995ea616d558',
-  REDIRECT_URI: 'http://localhost:3000/setup-for-spotify',
-  // REDIRECT_URI: 'https://carlos-lao.github.io/setup-for-spotify/',
+  REDIRECT_URI: 'https://carlos-lao.github.io/setup-for-spotify/',
   SCOPES: [
     'playlist-modify-public',
     'playlist-modify-private',
